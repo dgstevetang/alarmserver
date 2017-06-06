@@ -1,0 +1,101 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ehcache.xsd">
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="60"
+            timeToLiveSeconds="120"
+            overflowToDisk="true">
+        <!--<cacheEventListenerFactory class="net.oschina.j2cache.ehcache.EhCacheEventListenerFactory"/>-->
+    </defaultCache>
+
+    <!-- 前端页面请求对象缓存(空闲1天过期，活动1天过期) -->
+    <cache name="WebPageCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="86400"
+           timeToLiveSeconds="86400"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <cache name="GasRechargeCardVerifyTryTimes"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="7200"
+           timeToLiveSeconds="7200"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+
+
+    <!-- 前端页面请求对象缓存(半小时) -->
+    <cache name="SysTempCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="1800"
+           timeToLiveSeconds="1800"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 短时间缓存(1小时) -->
+    <cache name="ShortPageCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="3600"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"
+            />
+
+    <!-- Cookie Session 过期时间(60分钟)-->
+    <cache name="cookieSession"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="3600"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"/>
+
+    <!-- 永不过期缓存(60天）-->
+    <cache name="NeverExpiresCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="5184000"
+           timeToLiveSeconds="5184000"
+           maxElementsOnDisk="100000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="100"
+           memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- Shiro Cache -->
+    <cache name="myRealm.authorizationCache"
+           maxElementsInMemory="10000"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="true"
+           diskExpiryThreadIntervalSeconds="600">
+    </cache>
+
+    <cache name="shiro-activeSessionCache"
+           maxElementsInMemory="10000"
+           eternal="true"
+           diskPersistent="true"
+           overflowToDisk="true"
+           diskExpiryThreadIntervalSeconds="600"/>
+    
+</ehcache>
