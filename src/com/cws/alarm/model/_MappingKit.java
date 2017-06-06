@@ -16,6 +16,7 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 public class _MappingKit {
 
 	public static void mapping(ActiveRecordPlugin arp) {
+		arp.addMapping("adas_alarm", "id", AdasAlarm.class);
 		arp.addMapping("adas_collide", "id", AdasCollide.class);
 		arp.addMapping("adas_collide_gps", "id", AdasCollideGps.class);
 		arp.addMapping("adas_collide_senser", "id", AdasCollideSenser.class);

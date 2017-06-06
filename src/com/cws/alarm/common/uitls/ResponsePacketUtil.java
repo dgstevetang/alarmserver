@@ -1,6 +1,7 @@
 package com.cws.alarm.common.uitls;
 
 import com.cws.alarm.common.bean.ResponsePacketData;
+import com.jfinal.kit.PropKit;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 
@@ -48,6 +49,19 @@ public class ResponsePacketUtil {
         buf.writeBytes(resbytes);
         ctx.writeAndFlush(buf);
     }
-
+    public static void SendResponePacketConfig(byte[] deviceId, ChannelHandlerContext ctx) {
+        byte uploadtime = 20;
+        //转换为字节
+        try {
+            uploadtime =  Byte.parseByte(PropKit.get("config.odbuploadtime"));
+        }
+        catch (Exception e)
+        {
+        }
+        byte[] resbytes = responsePacket(deviceId, new byte[]{uploadtime});
+        ByteBuf buf = ctx.alloc().buffer(resbytes.length);
+        buf.writeBytes(resbytes);
+        ctx.writeAndFlush(buf);
+    }
 
 }

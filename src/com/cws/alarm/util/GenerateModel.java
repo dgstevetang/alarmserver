@@ -35,7 +35,7 @@ public class GenerateModel {
         // base model 所使用的包名
         String baseModelPackageName = "com.cws.alarm.model.base";
         // base model 文件保存路径
-        String baseModelOutputDir = PathKit.getWebRootPath() + "/../alarmserver/src/com/cws/alarm/model/base";
+        String baseModelOutputDir = PathKit.getWebRootPath() + "/../src/com/cws/alarm/model/base";
 
         // model 所使用的包名 (MappingKit 默认使用的包名)
         String modelPackageName = "com.cws.alarm.model";

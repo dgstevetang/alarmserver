@@ -9,76 +9,85 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasCollide<M extends BaseAdasCollide<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setEventid(Long eventid) {
+	public M setEventid(java.lang.String eventid) {
 		set("eventid", eventid);
 		return (M)this;
 	}
 
-	public Long getEventid() {
+	public java.lang.String getEventid() {
 		return get("eventid");
 	}
 
-	public M setEventtime(java.util.Date eventtime) {
+	public M setEventtime(java.lang.Integer eventtime) {
 		set("eventtime", eventtime);
 		return (M)this;
 	}
 
-	public java.util.Date getEventtime() {
+	public java.lang.Integer getEventtime() {
 		return get("eventtime");
 	}
 
-	public M setGPSDataCount(Integer GPSDataCount) {
+	public M setGPSDataCount(java.lang.Integer GPSDataCount) {
 		set("GPSDataCount", GPSDataCount);
 		return (M)this;
 	}
 
-	public Integer getGPSDataCount() {
+	public java.lang.Integer getGPSDataCount() {
 		return get("GPSDataCount");
 	}
 
-	public M setSenserCount(Integer SenserCount) {
+	public M setSenserCount(java.lang.Integer SenserCount) {
 		set("SenserCount", SenserCount);
 		return (M)this;
 	}
 
-	public Integer getSenserCount() {
+	public java.lang.Integer getSenserCount() {
 		return get("SenserCount");
 	}
 
-	public M setGPSDatas(String GPSDatas) {
+	public M setGPSDatas(java.lang.String GPSDatas) {
 		set("GPSDatas", GPSDatas);
 		return (M)this;
 	}
 
-	public String getGPSDatas() {
+	public java.lang.String getGPSDatas() {
 		return get("GPSDatas");
 	}
 
-	public M setSenserDatas(String SenserDatas) {
+	public M setSenserDatas(java.lang.String SenserDatas) {
 		set("SenserDatas", SenserDatas);
 		return (M)this;
 	}
 
-	public String getSenserDatas() {
+	public java.lang.String getSenserDatas() {
 		return get("SenserDatas");
+	}
+
+	public M setOccurdate(java.util.Date occurdate) {
+		set("occurdate", occurdate);
+		return (M)this;
+	}
+
+	public java.util.Date getOccurdate() {
+		return get("occurdate");
 	}
 
 }

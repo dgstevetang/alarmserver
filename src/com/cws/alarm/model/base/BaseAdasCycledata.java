@@ -9,21 +9,21 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasCycledata<M extends BaseAdasCycledata<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
@@ -36,84 +36,84 @@ public abstract class BaseAdasCycledata<M extends BaseAdasCycledata<M>> extends 
 		return get("valtage");
 	}
 
-	public M setRate1(Integer rate1) {
+	public M setRate1(java.lang.Integer rate1) {
 		set("rate1", rate1);
 		return (M)this;
 	}
 
-	public Integer getRate1() {
+	public java.lang.Integer getRate1() {
 		return get("rate1");
 	}
 
-	public M setRate2(Integer rate2) {
+	public M setRate2(java.lang.Integer rate2) {
 		set("rate2", rate2);
 		return (M)this;
 	}
 
-	public Integer getRate2() {
+	public java.lang.Integer getRate2() {
 		return get("rate2");
 	}
 
-	public M setRate3(Integer rate3) {
+	public M setRate3(java.lang.Integer rate3) {
 		set("rate3", rate3);
 		return (M)this;
 	}
 
-	public Integer getRate3() {
+	public java.lang.Integer getRate3() {
 		return get("rate3");
 	}
 
-	public M setRate4(Integer rate4) {
+	public M setRate4(java.lang.Integer rate4) {
 		set("rate4", rate4);
 		return (M)this;
 	}
 
-	public Integer getRate4() {
+	public java.lang.Integer getRate4() {
 		return get("rate4");
 	}
 
-	public M setSpeed1(Integer speed1) {
+	public M setSpeed1(java.lang.Integer speed1) {
 		set("speed1", speed1);
 		return (M)this;
 	}
 
-	public Integer getSpeed1() {
+	public java.lang.Integer getSpeed1() {
 		return get("speed1");
 	}
 
-	public M setSpeed2(Integer speed2) {
+	public M setSpeed2(java.lang.Integer speed2) {
 		set("speed2", speed2);
 		return (M)this;
 	}
 
-	public Integer getSpeed2() {
+	public java.lang.Integer getSpeed2() {
 		return get("speed2");
 	}
 
-	public M setSpeed3(Integer speed3) {
+	public M setSpeed3(java.lang.Integer speed3) {
 		set("speed3", speed3);
 		return (M)this;
 	}
 
-	public Integer getSpeed3() {
+	public java.lang.Integer getSpeed3() {
 		return get("speed3");
 	}
 
-	public M setSpeed4(Integer speed4) {
+	public M setSpeed4(java.lang.Integer speed4) {
 		set("speed4", speed4);
 		return (M)this;
 	}
 
-	public Integer getSpeed4() {
+	public java.lang.Integer getSpeed4() {
 		return get("speed4");
 	}
 
-	public M setTemperater(Integer temperater) {
+	public M setTemperater(java.lang.Integer temperater) {
 		set("temperater", temperater);
 		return (M)this;
 	}
 
-	public Integer getTemperater() {
+	public java.lang.Integer getTemperater() {
 		return get("temperater");
 	}
 
@@ -153,57 +153,57 @@ public abstract class BaseAdasCycledata<M extends BaseAdasCycledata<M>> extends 
 		return get("lpk4");
 	}
 
-	public M setTotalODO(Integer TotalODO) {
+	public M setTotalODO(java.lang.Integer TotalODO) {
 		set("TotalODO", TotalODO);
 		return (M)this;
 	}
 
-	public Integer getTotalODO() {
+	public java.lang.Integer getTotalODO() {
 		return get("TotalODO");
 	}
 
-	public M setLeftOil(Integer LeftOil) {
+	public M setLeftOil(java.lang.Integer LeftOil) {
 		set("LeftOil", LeftOil);
 		return (M)this;
 	}
 
-	public Integer getLeftOil() {
+	public java.lang.Integer getLeftOil() {
 		return get("LeftOil");
 	}
 
-	public M setErrorCount(Integer ErrorCount) {
+	public M setErrorCount(java.lang.Integer ErrorCount) {
 		set("ErrorCount", ErrorCount);
 		return (M)this;
 	}
 
-	public Integer getErrorCount() {
+	public java.lang.Integer getErrorCount() {
 		return get("ErrorCount");
 	}
 
-	public M setErrorCodes(String ErrorCodes) {
+	public M setErrorCodes(java.lang.String ErrorCodes) {
 		set("ErrorCodes", ErrorCodes);
 		return (M)this;
 	}
 
-	public String getErrorCodes() {
+	public java.lang.String getErrorCodes() {
 		return get("ErrorCodes");
 	}
 
-	public M setGPSDataCount(Integer GPSDataCount) {
+	public M setGPSDataCount(java.lang.Integer GPSDataCount) {
 		set("GPSDataCount", GPSDataCount);
 		return (M)this;
 	}
 
-	public Integer getGPSDataCount() {
+	public java.lang.Integer getGPSDataCount() {
 		return get("GPSDataCount");
 	}
 
-	public M setSenserDataCount(Integer SenserDataCount) {
+	public M setSenserDataCount(java.lang.Integer SenserDataCount) {
 		set("SenserDataCount", SenserDataCount);
 		return (M)this;
 	}
 
-	public Integer getSenserDataCount() {
+	public java.lang.Integer getSenserDataCount() {
 		return get("SenserDataCount");
 	}
 
@@ -216,21 +216,21 @@ public abstract class BaseAdasCycledata<M extends BaseAdasCycledata<M>> extends 
 		return get("occurtime");
 	}
 
-	public M setGPSDatas(String GPSDatas) {
+	public M setGPSDatas(java.lang.String GPSDatas) {
 		set("GPSDatas", GPSDatas);
 		return (M)this;
 	}
 
-	public String getGPSDatas() {
+	public java.lang.String getGPSDatas() {
 		return get("GPSDatas");
 	}
 
-	public M setSenserDatas(String SenserDatas) {
+	public M setSenserDatas(java.lang.String SenserDatas) {
 		set("SenserDatas", SenserDatas);
 		return (M)this;
 	}
 
-	public String getSenserDatas() {
+	public java.lang.String getSenserDatas() {
 		return get("SenserDatas");
 	}
 

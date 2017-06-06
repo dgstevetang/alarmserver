@@ -23,6 +23,81 @@ import java.util.UUID;
  */
 public class PacketHandler {
 
+    public static void saveADASAlarmData(String deviceSn, ADASAlarmData adasAlarmData) {
+        AdasAlarm adasAlarm = new AdasAlarm();
+        adasAlarm.setDeviceSn(deviceSn);
+        adasAlarm.setEventid(UUID.randomUUID().toString());
+        adasAlarm.setOccurtime(adasAlarmData.getM_Date());
+        adasAlarm.setFCWEvent(adasAlarmData.getM_FCWEvent());
+        adasAlarm.setHMWTime(adasAlarmData.getM_HMWTime());
+        adasAlarm.setLLDistance(adasAlarmData.getM_LLDistance());
+        adasAlarm.setPDistance(adasAlarmData.getM_PDistance());
+        adasAlarm.setPDWEvent(adasAlarmData.getM_PDistance());
+        adasAlarm.setRLDistance(adasAlarmData.getM_RLDistance());
+        adasAlarm.setVDistance(adasAlarmData.getM_VDistance());
+        adasAlarm.save();
+
+    }
+
+    /**
+     * 保存碰撞数据
+     * @param deviceSn
+     * @param collisionData
+     */
+    public static void saveCollisionData(String deviceSn, CollisionData collisionData) {
+        AdasCollide adasCollide = new AdasCollide();
+        adasCollide.setDeviceSn(deviceSn);
+        adasCollide.setEventid(UUID.randomUUID().toString());
+        adasCollide.setEventtime(collisionData.getEventTime());
+        adasCollide.setOccurdate(collisionData.getM_Date());
+        adasCollide.setSenserCount(collisionData.getSenserCount());
+        adasCollide.setGPSDataCount(collisionData.getGPSDataCount());
+        adasCollide.save();
+        long id = adasCollide.getId();
+        GpsData[] gpsDatas = collisionData.getGPSDatas();
+        for (int i = 0; i < gpsDatas.length; i++) {
+            GpsData gpsData = gpsDatas[i];
+            AdasCollideGps adasCollideGps = new AdasCollideGps();
+            adasCollideGps.setDeviceSn(deviceSn);
+            Long m_time = Long.valueOf(gpsData.getM_Time()) * 1000;
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String d = format.format(m_time);
+            Date date = null;
+            try {
+                date = format.parse(d);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            adasCollideGps.setEventid(id);
+            adasCollideGps.setOccurtime(date);
+            adasCollideGps.setLatitude(BigDecimal.valueOf(gpsData.getM_Latitude()));
+            adasCollideGps.setLongitude(BigDecimal.valueOf(gpsData.getM_Longitude()));
+            adasCollideGps.setAltitude(BigDecimal.valueOf(gpsData.getM_Altitude()));
+            adasCollideGps.setDirect(gpsData.getM_Direct());
+            adasCollideGps.setSpeed(gpsData.getM_Speed());
+            adasCollideGps.setStatus(gpsData.getM_Status());
+            adasCollideGps.setStarNum(gpsData.getM_StarNum());
+            adasCollideGps.setStarInViewNum(gpsData.getM_StarInViewNum());
+            adasCollideGps.save();
+        }
+        SenserData[] senserDatas = collisionData.getSenserDatas();
+        for (int i = 0; i < senserDatas.length; i++) {
+            SenserData senserData = senserDatas[i];
+            AdasCollideSenser adasCollideSenser = new AdasCollideSenser();
+            adasCollideSenser.setEventid(id);
+            adasCollideSenser.setOccurtime(new Date());
+            adasCollideSenser.setDeviceSn(deviceSn);
+            adasCollideSenser.setAccelerationX(senserData.getmAccelerationX());
+            adasCollideSenser.setAccelerationY(senserData.getmAccelerationY());
+            adasCollideSenser.setAccelerationZ(senserData.getmAccelerationZ());
+            adasCollideSenser.setGyroscopeX((long)senserData.getmGyroscopeX());
+            adasCollideSenser.setGyroscopeY((long) senserData.getmGyroscopeY());
+            adasCollideSenser.setGyroscopeZ((long) senserData.getmGyroscopeZ());
+            adasCollideSenser.save();
+        }
+
+    }
+
     public static void saveEmergencyData(String deviceSn, EmergencyData emergencyData) {
         AdasEmergency adasEmergency = new AdasEmergency();
         adasEmergency.setDeviceSn(deviceSn);

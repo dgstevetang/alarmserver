@@ -9,30 +9,30 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasEmergencyGps<M extends BaseAdasEmergencyGps<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setEventid(Long eventid) {
+	public M setEventid(java.lang.Long eventid) {
 		set("eventid", eventid);
 		return (M)this;
 	}
 
-	public Long getEventid() {
+	public java.lang.Long getEventid() {
 		return get("eventid");
 	}
 
@@ -72,48 +72,48 @@ public abstract class BaseAdasEmergencyGps<M extends BaseAdasEmergencyGps<M>> ex
 		return get("altitude");
 	}
 
-	public M setStatus(Integer status) {
+	public M setStatus(java.lang.Integer status) {
 		set("status", status);
 		return (M)this;
 	}
 
-	public Integer getStatus() {
+	public java.lang.Integer getStatus() {
 		return get("status");
 	}
 
-	public M setDirect(Integer direct) {
+	public M setDirect(java.lang.Integer direct) {
 		set("direct", direct);
 		return (M)this;
 	}
 
-	public Integer getDirect() {
+	public java.lang.Integer getDirect() {
 		return get("direct");
 	}
 
-	public M setSpeed(Integer speed) {
+	public M setSpeed(java.lang.Integer speed) {
 		set("speed", speed);
 		return (M)this;
 	}
 
-	public Integer getSpeed() {
+	public java.lang.Integer getSpeed() {
 		return get("speed");
 	}
 
-	public M setStarNum(Integer starNum) {
+	public M setStarNum(java.lang.Integer starNum) {
 		set("starNum", starNum);
 		return (M)this;
 	}
 
-	public Integer getStarNum() {
+	public java.lang.Integer getStarNum() {
 		return get("starNum");
 	}
 
-	public M setStarInViewNum(Integer StarInViewNum) {
+	public M setStarInViewNum(java.lang.Integer StarInViewNum) {
 		set("StarInViewNum", StarInViewNum);
 		return (M)this;
 	}
 
-	public Integer getStarInViewNum() {
+	public java.lang.Integer getStarInViewNum() {
 		return get("StarInViewNum");
 	}
 

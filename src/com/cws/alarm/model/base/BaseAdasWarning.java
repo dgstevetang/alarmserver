@@ -9,103 +9,112 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasWarning<M extends BaseAdasWarning<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setEventid(Long eventid) {
+	public M setEventid(java.lang.String eventid) {
 		set("eventid", eventid);
 		return (M)this;
 	}
 
-	public Long getEventid() {
+	public java.lang.String getEventid() {
 		return get("eventid");
 	}
 
-	public M setEventtime(java.util.Date eventtime) {
+	public M setEventtime(java.lang.Integer eventtime) {
 		set("eventtime", eventtime);
 		return (M)this;
 	}
 
-	public java.util.Date getEventtime() {
+	public java.lang.Integer getEventtime() {
 		return get("eventtime");
 	}
 
-	public M setFCWEvent(Integer FCWEvent) {
+	public M setFCWEvent(java.lang.Integer FCWEvent) {
 		set("FCWEvent", FCWEvent);
 		return (M)this;
 	}
 
-	public Integer getFCWEvent() {
+	public java.lang.Integer getFCWEvent() {
 		return get("FCWEvent");
 	}
 
-	public M setHMWTime(Integer HMWTime) {
+	public M setHMWTime(java.lang.Integer HMWTime) {
 		set("HMWTime", HMWTime);
 		return (M)this;
 	}
 
-	public Integer getHMWTime() {
+	public java.lang.Integer getHMWTime() {
 		return get("HMWTime");
 	}
 
-	public M setVDistance(Integer VDistance) {
+	public M setVDistance(java.lang.Integer VDistance) {
 		set("VDistance", VDistance);
 		return (M)this;
 	}
 
-	public Integer getVDistance() {
+	public java.lang.Integer getVDistance() {
 		return get("VDistance");
 	}
 
-	public M setLLDistance(Integer LLDistance) {
+	public M setLLDistance(java.lang.Integer LLDistance) {
 		set("LLDistance", LLDistance);
 		return (M)this;
 	}
 
-	public Integer getLLDistance() {
+	public java.lang.Integer getLLDistance() {
 		return get("LLDistance");
 	}
 
-	public M setRLDistance(Integer RLDistance) {
+	public M setRLDistance(java.lang.Integer RLDistance) {
 		set("RLDistance", RLDistance);
 		return (M)this;
 	}
 
-	public Integer getRLDistance() {
+	public java.lang.Integer getRLDistance() {
 		return get("RLDistance");
 	}
 
-	public M setPDWEvent(Integer PDWEvent) {
+	public M setPDWEvent(java.lang.Integer PDWEvent) {
 		set("PDWEvent", PDWEvent);
 		return (M)this;
 	}
 
-	public Integer getPDWEvent() {
+	public java.lang.Integer getPDWEvent() {
 		return get("PDWEvent");
 	}
 
-	public M setPDistance(Integer PDistance) {
+	public M setPDistance(java.lang.Integer PDistance) {
 		set("PDistance", PDistance);
 		return (M)this;
 	}
 
-	public Integer getPDistance() {
+	public java.lang.Integer getPDistance() {
 		return get("PDistance");
+	}
+
+	public M setOccurtime(java.util.Date occurtime) {
+		set("occurtime", occurtime);
+		return (M)this;
+	}
+
+	public java.util.Date getOccurtime() {
+		return get("occurtime");
 	}
 
 }

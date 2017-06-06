@@ -9,39 +9,39 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseHdxVehiclesTrips<M extends BaseHdxVehiclesTrips<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setVehicleId(Long vehicleId) {
+	public M setVehicleId(java.lang.Long vehicleId) {
 		set("vehicleId", vehicleId);
 		return (M)this;
 	}
 
-	public Long getVehicleId() {
+	public java.lang.Long getVehicleId() {
 		return get("vehicleId");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setTripId(Long tripId) {
+	public M setTripId(java.lang.Long tripId) {
 		set("trip_Id", tripId);
 		return (M)this;
 	}
 
-	public Long getTripId() {
+	public java.lang.Long getTripId() {
 		return get("trip_Id");
 	}
 
@@ -81,75 +81,75 @@ public abstract class BaseHdxVehiclesTrips<M extends BaseHdxVehiclesTrips<M>> ex
 		return get("highest_speed");
 	}
 
-	public M setMileage(Integer mileage) {
+	public M setMileage(java.lang.Integer mileage) {
 		set("mileage", mileage);
 		return (M)this;
 	}
 
-	public Integer getMileage() {
+	public java.lang.Integer getMileage() {
 		return get("mileage");
 	}
 
-	public M setPending(Boolean pending) {
+	public M setPending(java.lang.Boolean pending) {
 		set("pending", pending);
 		return (M)this;
 	}
 
-	public Boolean getPending() {
+	public java.lang.Boolean getPending() {
 		return get("pending");
 	}
 
-	public M setPointTripBegin(String pointTripBegin) {
+	public M setPointTripBegin(java.lang.String pointTripBegin) {
 		set("point_trip_begin", pointTripBegin);
 		return (M)this;
 	}
 
-	public String getPointTripBegin() {
+	public java.lang.String getPointTripBegin() {
 		return get("point_trip_begin");
 	}
 
-	public M setPointTripEnd(String pointTripEnd) {
+	public M setPointTripEnd(java.lang.String pointTripEnd) {
 		set("point_trip_end", pointTripEnd);
 		return (M)this;
 	}
 
-	public String getPointTripEnd() {
+	public java.lang.String getPointTripEnd() {
 		return get("point_trip_end");
 	}
 
-	public M setSpeedBarUrl(String speedBarUrl) {
+	public M setSpeedBarUrl(java.lang.String speedBarUrl) {
 		set("speed_bar_url", speedBarUrl);
 		return (M)this;
 	}
 
-	public String getSpeedBarUrl() {
+	public java.lang.String getSpeedBarUrl() {
 		return get("speed_bar_url");
 	}
 
-	public M setSuddenAccelerationCount(Integer suddenAccelerationCount) {
+	public M setSuddenAccelerationCount(java.lang.Integer suddenAccelerationCount) {
 		set("sudden_acceleration_count", suddenAccelerationCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenAccelerationCount() {
+	public java.lang.Integer getSuddenAccelerationCount() {
 		return get("sudden_acceleration_count");
 	}
 
-	public M setSuddenBrakeCount(Integer suddenBrakeCount) {
+	public M setSuddenBrakeCount(java.lang.Integer suddenBrakeCount) {
 		set("sudden_brake_count", suddenBrakeCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenBrakeCount() {
+	public java.lang.Integer getSuddenBrakeCount() {
 		return get("sudden_brake_count");
 	}
 
-	public M setSuddenTurningCount(Integer suddenTurningCount) {
+	public M setSuddenTurningCount(java.lang.Integer suddenTurningCount) {
 		set("sudden_turning_count", suddenTurningCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenTurningCount() {
+	public java.lang.Integer getSuddenTurningCount() {
 		return get("sudden_turning_count");
 	}
 
@@ -180,12 +180,12 @@ public abstract class BaseHdxVehiclesTrips<M extends BaseHdxVehiclesTrips<M>> ex
 		return get("total_fuel_economy");
 	}
 
-	public M setGpsOnly(Boolean gpsOnly) {
+	public M setGpsOnly(java.lang.Boolean gpsOnly) {
 		set("gps_only", gpsOnly);
 		return (M)this;
 	}
 
-	public Boolean getGpsOnly() {
+	public java.lang.Boolean getGpsOnly() {
 		return get("gps_only");
 	}
 

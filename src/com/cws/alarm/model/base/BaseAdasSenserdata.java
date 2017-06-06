@@ -9,30 +9,30 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasSenserdata<M extends BaseAdasSenserdata<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setEventid(Long eventid) {
+	public M setEventid(java.lang.Long eventid) {
 		set("eventid", eventid);
 		return (M)this;
 	}
 
-	public Long getEventid() {
+	public java.lang.Long getEventid() {
 		return get("eventid");
 	}
 
@@ -45,57 +45,57 @@ public abstract class BaseAdasSenserdata<M extends BaseAdasSenserdata<M>> extend
 		return get("occurtime");
 	}
 
-	public M setAccelerationX(Integer accelerationX) {
+	public M setAccelerationX(java.lang.Integer accelerationX) {
 		set("accelerationX", accelerationX);
 		return (M)this;
 	}
 
-	public Integer getAccelerationX() {
+	public java.lang.Integer getAccelerationX() {
 		return get("accelerationX");
 	}
 
-	public M setAccelerationY(Integer accelerationY) {
+	public M setAccelerationY(java.lang.Integer accelerationY) {
 		set("accelerationY", accelerationY);
 		return (M)this;
 	}
 
-	public Integer getAccelerationY() {
+	public java.lang.Integer getAccelerationY() {
 		return get("accelerationY");
 	}
 
-	public M setAccelerationZ(Integer accelerationZ) {
+	public M setAccelerationZ(java.lang.Integer accelerationZ) {
 		set("accelerationZ", accelerationZ);
 		return (M)this;
 	}
 
-	public Integer getAccelerationZ() {
+	public java.lang.Integer getAccelerationZ() {
 		return get("accelerationZ");
 	}
 
-	public M setGyroscopeX(Long gyroscopeX) {
+	public M setGyroscopeX(java.lang.Long gyroscopeX) {
 		set("gyroscopeX", gyroscopeX);
 		return (M)this;
 	}
 
-	public Long getGyroscopeX() {
+	public java.lang.Long getGyroscopeX() {
 		return get("gyroscopeX");
 	}
 
-	public M setGyroscopeY(Long gyroscopeY) {
+	public M setGyroscopeY(java.lang.Long gyroscopeY) {
 		set("gyroscopeY", gyroscopeY);
 		return (M)this;
 	}
 
-	public Long getGyroscopeY() {
+	public java.lang.Long getGyroscopeY() {
 		return get("gyroscopeY");
 	}
 
-	public M setGyroscopeZ(Long gyroscopeZ) {
+	public M setGyroscopeZ(java.lang.Long gyroscopeZ) {
 		set("gyroscopeZ", gyroscopeZ);
 		return (M)this;
 	}
 
-	public Long getGyroscopeZ() {
+	public java.lang.Long getGyroscopeZ() {
 		return get("gyroscopeZ");
 	}
 

@@ -9,111 +9,111 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseAdasTrips<M extends BaseAdasTrips<M>> extends Model<M> implements IBean {
 
-	public M setId(Long id) {
+	public M setId(java.lang.Long id) {
 		set("id", id);
 		return (M)this;
 	}
 
-	public Long getId() {
+	public java.lang.Long getId() {
 		return get("id");
 	}
 
-	public M setDeviceSn(String deviceSn) {
+	public M setDeviceSn(java.lang.String deviceSn) {
 		set("deviceSn", deviceSn);
 		return (M)this;
 	}
 
-	public String getDeviceSn() {
+	public java.lang.String getDeviceSn() {
 		return get("deviceSn");
 	}
 
-	public M setTripId(String tripId) {
+	public M setTripId(java.lang.String tripId) {
 		set("trip_Id", tripId);
 		return (M)this;
 	}
 
-	public String getTripId() {
+	public java.lang.String getTripId() {
 		return get("trip_Id");
 	}
 
-	public M setAverageSpeed(Integer averageSpeed) {
+	public M setAverageSpeed(java.lang.Integer averageSpeed) {
 		set("average_speed", averageSpeed);
 		return (M)this;
 	}
 
-	public Integer getAverageSpeed() {
+	public java.lang.Integer getAverageSpeed() {
 		return get("average_speed");
 	}
 
-	public M setHighestRate(Integer highestRate) {
+	public M setHighestRate(java.lang.Integer highestRate) {
 		set("highest_rate", highestRate);
 		return (M)this;
 	}
 
-	public Integer getHighestRate() {
+	public java.lang.Integer getHighestRate() {
 		return get("highest_rate");
 	}
 
-	public M setHighestSpeed(Integer highestSpeed) {
+	public M setHighestSpeed(java.lang.Integer highestSpeed) {
 		set("highest_speed", highestSpeed);
 		return (M)this;
 	}
 
-	public Integer getHighestSpeed() {
+	public java.lang.Integer getHighestSpeed() {
 		return get("highest_speed");
 	}
 
-	public M setMileage(Integer mileage) {
+	public M setMileage(java.lang.Integer mileage) {
 		set("mileage", mileage);
 		return (M)this;
 	}
 
-	public Integer getMileage() {
+	public java.lang.Integer getMileage() {
 		return get("mileage");
 	}
 
-	public M setPointTripBegin(String pointTripBegin) {
+	public M setPointTripBegin(java.lang.String pointTripBegin) {
 		set("point_trip_begin", pointTripBegin);
 		return (M)this;
 	}
 
-	public String getPointTripBegin() {
+	public java.lang.String getPointTripBegin() {
 		return get("point_trip_begin");
 	}
 
-	public M setPointTripEnd(String pointTripEnd) {
+	public M setPointTripEnd(java.lang.String pointTripEnd) {
 		set("point_trip_end", pointTripEnd);
 		return (M)this;
 	}
 
-	public String getPointTripEnd() {
+	public java.lang.String getPointTripEnd() {
 		return get("point_trip_end");
 	}
 
-	public M setSuddenAccelerationCount(Integer suddenAccelerationCount) {
+	public M setSuddenAccelerationCount(java.lang.Integer suddenAccelerationCount) {
 		set("sudden_acceleration_count", suddenAccelerationCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenAccelerationCount() {
+	public java.lang.Integer getSuddenAccelerationCount() {
 		return get("sudden_acceleration_count");
 	}
 
-	public M setSuddenBrakeCount(Integer suddenBrakeCount) {
+	public M setSuddenBrakeCount(java.lang.Integer suddenBrakeCount) {
 		set("sudden_brake_count", suddenBrakeCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenBrakeCount() {
+	public java.lang.Integer getSuddenBrakeCount() {
 		return get("sudden_brake_count");
 	}
 
-	public M setSuddenTurningCount(Integer suddenTurningCount) {
+	public M setSuddenTurningCount(java.lang.Integer suddenTurningCount) {
 		set("sudden_turning_count", suddenTurningCount);
 		return (M)this;
 	}
 
-	public Integer getSuddenTurningCount() {
+	public java.lang.Integer getSuddenTurningCount() {
 		return get("sudden_turning_count");
 	}
 
@@ -189,21 +189,21 @@ public abstract class BaseAdasTrips<M extends BaseAdasTrips<M>> extends Model<M>
 		return get("total_fuel");
 	}
 
-	public M setIdleTime(Integer idleTime) {
+	public M setIdleTime(java.lang.Integer idleTime) {
 		set("idle_time", idleTime);
 		return (M)this;
 	}
 
-	public Integer getIdleTime() {
+	public java.lang.Integer getIdleTime() {
 		return get("idle_time");
 	}
 
-	public M setDriveTime(Integer driveTime) {
+	public M setDriveTime(java.lang.Integer driveTime) {
 		set("drive_time", driveTime);
 		return (M)this;
 	}
 
-	public Integer getDriveTime() {
+	public java.lang.Integer getDriveTime() {
 		return get("drive_time");
 	}
 

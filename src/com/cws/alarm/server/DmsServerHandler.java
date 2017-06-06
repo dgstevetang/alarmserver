@@ -22,8 +22,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import org.apache.log4j.Logger;
 
 import static com.cws.alarm.common.uitls.DataAnalysisUitl.analysis;
-import static com.cws.alarm.common.uitls.ResponsePacketUtil.SendResponePacketPareseError;
-import static com.cws.alarm.common.uitls.ResponsePacketUtil.SendResponePacketSuccess;
+import static com.cws.alarm.common.uitls.ResponsePacketUtil.*;
 import static com.cws.alarm.server.PacketHandler.*;
 
 /**
@@ -55,8 +54,17 @@ public class DmsServerHandler  extends SimpleChannelInboundHandler<ByteBuf> {
         //analysis(data, new ResultCallback() {
             @Override
             public void onFailure(int errorCode, Exception e) {
-                log.error("解析发生错误:"+errorCode);
-                SendResponePacketPareseError(deviceId, ctx);
+                log.error("解析发生错误:" + errorCode);
+                switch (errorCode) {
+                    case ResponsePacketData.PARITYCHECKCODESERROR:
+                        SendResponePacketCrcError(deviceId, ctx);
+                        break;
+                    case ResponsePacketData.LENGTHERROR:
+                        SendResponePacketLengthError(deviceId, ctx);
+                        break;
+                    default:
+                        SendResponePacketPareseError(deviceId, ctx);
+                }
             }
 
             @Override
@@ -66,9 +74,7 @@ public class DmsServerHandler  extends SimpleChannelInboundHandler<ByteBuf> {
                         //收到应答包
                         ResponsePacketData responsePacketData = new ResponsePacketData();
                         log.error("收到应答包:"+responsePacketData.getResult());
-
                         break;
-
                     case DataAnalysisUitl.ADASTCPkey.OBDVALUE_PERIODICALLY:
                         //周期性上传的OBD数据
                         OBDValue obdvalue = (OBDValue)response;
@@ -96,6 +102,7 @@ public class DmsServerHandler  extends SimpleChannelInboundHandler<ByteBuf> {
                     case DataAnalysisUitl.ADASTCPkey.COLLISION:
                         //碰撞事件
                         CollisionData collisionData = (CollisionData)response;
+                        saveCollisionData(deviceSn,collisionData);
                         log.error("收到碰撞事件的数据");
                         SendResponePacketSuccess(deviceId, ctx);
 
@@ -103,6 +110,7 @@ public class DmsServerHandler  extends SimpleChannelInboundHandler<ByteBuf> {
                     case DataAnalysisUitl.ADASTCPkey.ADASALARMEVENT:
                         //ADAS报警
                         ADASAlarmData adasAlarmData = (ADASAlarmData)response;
+                        saveADASAlarmData(deviceSn,adasAlarmData);
                         log.error("收到ADAS报警的数据");
                         SendResponePacketSuccess(deviceId, ctx);
                         break;
@@ -110,7 +118,7 @@ public class DmsServerHandler  extends SimpleChannelInboundHandler<ByteBuf> {
                         //设备请求周期配置表
                         RequsetConfigData requsetConfigData = (RequsetConfigData)response;
                         log.error("收到请求配置信息的请求");
-
+                        SendResponePacketConfig(deviceId,ctx);
                         break;
                 }
             }
